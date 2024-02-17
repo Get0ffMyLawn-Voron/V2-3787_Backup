@@ -121,12 +121,12 @@ function add_updater {
 
 function restart_klipper {
     echo "[POST-INSTALL] Restarting Klipper..."
-    sudo systemctl restart klipper
+    sudo systemctl restart klipper-V23787
 }
 
 function restart_moonraker {
     echo "[POST-INSTALL] Restarting Moonraker..."
-    sudo systemctl restart moonraker
+    sudo systemctl restart moonraker-V23787
 }
 
 
