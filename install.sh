@@ -4,8 +4,8 @@ USER_CONFIG_PATH="${HOME}/V23787_data/config"
 MOONRAKER_CONFIG="${HOME}/V23787_data/config/moonraker.conf"
 KLIPPER_PATH="${HOME}/klipper"
 
-K_SHAKETUNE_PATH="${HOME}/klippain_shaketune"
-K_SHAKETUNE_VENV_PATH="${HOME}/klippain_shaketune-env"
+K_SHAKETUNE_PATH="${HOME}/V23787_data/klippain_shaketune"
+K_SHAKETUNE_VENV_PATH="${HOME}/V23787_data/klippain_shaketune-env"
 
 set -eu
 export LC_ALL=C
