@@ -4,7 +4,7 @@ set -e
 
 KLIPPER_PATH="${HOME}/klipper"
 SYSTEMDDIR="/etc/systemd/system"
-MOONRAKER_CONFIG_DIR="${HOME}/printer_data/config"
+MOONRAKER_CONFIG_DIR="${HOME}/V23787_data/config"
 
 # Fall back to old directory for configuration as default
 if [ ! -d "${MOONRAKER_CONFIG_DIR}" ]; then
@@ -29,7 +29,7 @@ SRCDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/src/ && pwd )"
 # Verify Klipper has been installed
 check_klipper()
 {
-    if [ "$(sudo systemctl list-units --full -all -t service --no-legend | grep -F "klipper.service")" ]; then
+    if [ "$(sudo systemctl list-units --full -all -t service --no-legend | grep -F "klipper-V237873.service")" ]; then
         echo "Klipper service found."
     else
         echo "[ERROR] Klipper service not found, please install Klipper first"
@@ -64,7 +64,7 @@ link_extension()
 restart_moonraker()
 {
     echo -n "Restarting Moonraker... "
-    sudo systemctl restart moonraker
+    sudo systemctl restart moonraker-V23787
     echo "[OK]"
 }
 
@@ -90,21 +90,21 @@ add_updater()
 restart_klipper()
 {
     echo -n "Restarting Klipper... "
-    sudo systemctl restart klipper
+    sudo systemctl restart klipper-V23787
     echo "[OK]"
 }
 
 start_klipper()
 {
     echo -n "Starting Klipper... "
-    sudo systemctl start klipper
+    sudo systemctl start klipper-V23787
     echo "[OK]"
 }
 
 stop_klipper()
 {
     echo -n "Stopping Klipper... "
-    sudo systemctl start klipper
+    sudo systemctl start klipper-V23787
     echo "[OK]"
 }
 
